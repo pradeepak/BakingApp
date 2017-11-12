@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <android.support.v4.widget.NestedScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="2dp"
+                    app:cardUseCompatPadding="true"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:id="@+id/ingredientContainer">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:paddingTop="16dp"
+                              android:id="@+id/ingredientsTitle"
+                              android:textSize="20dp"
+                              style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                              android:layout_gravity="center"
+                              android:text="@string/ingredients_title"/>
+
+                    <TableLayout android:layout_width="match_parent"
+                                 android:layout_height="wrap_content"
+                                 android:stretchColumns="*"
+                                 android:paddingLeft="16dp"
+                                 android:paddingRight="16dp"
+                                 android:paddingBottom="8dp"
+                                 android:paddingTop="8dp"
+                                 android:weightSum="5">
+                        <TableRow>
+                            <TextView
+                                    android:id="@+id/ingredientName"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="3"
+                                    android:maxLines="2"
+                                    android:textSize="16sp"
+                                    android:text="@string/Ingredient_item_tile"
+                                    android:gravity="start"
+                                    android:textStyle="bold"/>
+                            <TextView
+                                    android:id="@+id/ingredientAmount"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:text="@string/measure_title"
+                                    android:textStyle="bold"/>
+                            <TextView
+                                    android:id="@+id/ingredientQuantity"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end" android:textSize="16sp"
+                                    android:layout_weight="1"
+                                    android:text="@string/quantity_title"
+                                    android:textStyle="bold"
+                            />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descriptionCard"
+                    app:cardCornerRadius="2dp"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="2dp"
+                    android:layout_margin="8dp"
+                    android:padding="8dp">
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:id="@+id/stepDescription">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:paddingTop="16dp"
+                              android:paddingBottom="16dp"
+                              android:id="@+id/stepDesctiptionTitle"
+                              android:textSize="20dp"
+                              style="@style/TextAppearance.Widget.AppCompat.Toolbar.Title"
+                              android:layout_gravity="center"
+                              android:text="Recipe Steps"/>
+                    <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dp"
+                            android:paddingTop="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp"
+                            android:background="@color/divider"/>
+                    <android.support.v7.widget.RecyclerView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/descriptionRecyclerView"
+                            android:paddingTop="8dp"
+                            android:nestedScrollingEnabled="false">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>

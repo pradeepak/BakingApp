@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Baking App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ingredients_title">Ingredients</string>
+    <string name="quantity_title">Quantity</string>
+    <string name="measure_title">Measure</string>
+    <string name="Ingredient_item_tile">Item</string>
+    <string name="step_instruction_title">Instructions</string>
+    <string name="recipe_list_title">Baking Recipes</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">next</string>
+    <string name="recipe_description_title">Recipe Description</string>
+    <string name="step_description_title">Step Description</string>
+    <string name="no_video_description">No Video Available</string>
+</resources>
